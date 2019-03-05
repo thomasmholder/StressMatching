@@ -23,8 +23,3 @@ class Sentence:
 
         for self.word in self.contentlist:
             self.wordlist.append(Word(self.word))
-
-
-x = Sentence("permit teenage mutant ninja turtles")
-for word in x.wordlist:
-    print(word.stresseslist)
