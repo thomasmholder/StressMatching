@@ -25,7 +25,18 @@ class Sentence:
             self.wordclass = Word(self.word)
             self.wordlist.append(self.wordclass)
 
-    def getmeter(self):
-        self.meterlist = []
         for word in self.wordlist:
             self.meterlist.append(word.stresseslist)
+
+
+@Sentence
+def comparemeter(sentence1, sentence2):
+    if sentence1.meterlist.length() != sentence2.meterlist.length():
+        return False
+
+    for i in sentence1.meterlist.length():
+        for stress in sentence1.meterlist[i]:
+            if stress in sentence2.meterlist[i] is False:
+                return False
+
+    return True
