@@ -31,11 +31,14 @@ class Sentence:
 
 def comparemeter(sentence1, sentence2):
     if len(sentence1.meterlist) != len(sentence2.meterlist):
+        print("LengthFalse")
         return False
 
     for i in range(len(sentence1.meterlist)):
         for stress in sentence1.meterlist[i]:
-            if stress in sentence2.meterlist[i] is False:
+            if stress not in sentence2.meterlist[i]:
+                print("MeterFalse")
+                print(i)
                 return False
 
     return True
