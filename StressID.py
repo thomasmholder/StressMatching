@@ -24,5 +24,9 @@ class Sentence:
 
         for self.word in self.contentlist:
             self.wordclass = Word(self.word)
-            self.wordlist.append(Word(self.wordclass))
-            self.meter.append(self.wordclass)
+            self.wordlist.append(self.wordclass)
+
+    def getMeter(self):
+        self.meterlist = []
+        for word in self.wordlist:
+            self.meterlist.append(word.stresseslist)
