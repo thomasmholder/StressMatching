@@ -29,12 +29,11 @@ class Sentence:
             self.meterlist.append(word.stresseslist)
 
 
-@Sentence
 def comparemeter(sentence1, sentence2):
-    if sentence1.meterlist.length() != sentence2.meterlist.length():
+    if len(sentence1.meterlist) != len(sentence2.meterlist):
         return False
 
-    for i in sentence1.meterlist.length():
+    for i in len(sentence1.meterlist):
         for stress in sentence1.meterlist[i]:
             if stress in sentence2.meterlist[i] is False:
                 return False
