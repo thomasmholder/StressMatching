@@ -33,7 +33,7 @@ def comparemeter(sentence1, sentence2):
     if len(sentence1.meterlist) != len(sentence2.meterlist):
         return False
 
-    for i in len(sentence1.meterlist):
+    for i in range(len(sentence1.meterlist)):
         for stress in sentence1.meterlist[i]:
             if stress in sentence2.meterlist[i] is False:
                 return False
