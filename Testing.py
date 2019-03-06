@@ -1,7 +1,7 @@
 from StressID import *
 
 x = Sentence("Teenage Mutant Ninja Turtles")
-y = Sentence("southmark's sovietologist linenger's usurping")
+y = Sentence("bleep")
 
 print(x.meterlist)
 print(y.meterlist)
