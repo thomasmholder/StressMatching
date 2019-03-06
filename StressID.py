@@ -20,6 +20,9 @@ class Sentence:
 
     def __init__(self, content):
         self.contentlist = content.split()
+        self.meter = []
 
         for self.word in self.contentlist:
-            self.wordlist.append(Word(self.word))
+            self.wordclass = Word(self.word)
+            self.wordlist.append(Word(self.wordclass))
+            self.meter.append(self.wordclass)
